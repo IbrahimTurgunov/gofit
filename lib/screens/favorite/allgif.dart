@@ -8,7 +8,8 @@ class AllGif extends StatefulWidget {
   String sets;
   String rest;
   int index;
-   AllGif({super.key, 
+  AllGif(
+      {super.key,
       required this.reps,
       required this.gif,
       required this.sets,
@@ -22,7 +23,6 @@ class AllGif extends StatefulWidget {
 class _AllGifState extends State<AllGif> {
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         title: const Text("Favorite exercise",
@@ -41,10 +41,18 @@ class _AllGifState extends State<AllGif> {
                   height: 500,
                   width: 350,
                   decoration: BoxDecoration(
-                    color: white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 4,
+                        offset: const Offset(0, 1),
+                      ),
+                    ],
+                    color: Colors.white,
                     image: DecorationImage(
                         image: NetworkImage(widget.gif), fit: BoxFit.contain),
-                    border: Border.all(width: 2, color: grey),
+                    // border: Border.all(width: 2, color: Colors.grey),
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
@@ -52,16 +60,19 @@ class _AllGifState extends State<AllGif> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 30, bottom: 10),
+            padding: const EdgeInsets.only(top: 20, left: 30, bottom: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Sets: ${widget.sets}",
-                    style: const TextStyle(color: blue)),
+                    style: const TextStyle(
+                        color: blue, fontWeight: FontWeight.w600)),
                 Text("Reps: ${widget.reps}",
-                    style: const TextStyle(color: blue)),
+                    style: const TextStyle(
+                        color: blue, fontWeight: FontWeight.w600)),
                 Text("Rest: ${widget.rest}",
-                    style: const TextStyle(color: blue)),
+                    style: const TextStyle(
+                        color: blue, fontWeight: FontWeight.w600)),
                 const Text(
                   "IMPORTANT: Do a slow negative phase for 2-3 seconds",
                   style: TextStyle(color: red, fontWeight: FontWeight.bold),
@@ -83,7 +94,7 @@ class _AllGifState extends State<AllGif> {
                   },
                   child: const Text("Done",
                       style: TextStyle(
-                          color: white, fontWeight: FontWeight.bold))),
+                          color: Colors.white, fontWeight: FontWeight.bold))),
             ),
           )
         ],
