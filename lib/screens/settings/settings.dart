@@ -78,7 +78,7 @@ class _SettingsState extends State<Settings> {
                 enableFeedback: false,
                 borderRadius: const BorderRadius.all(Radius.circular(15)),
                 onTap: () {
-                  launchUrl(Uri.parse("mailto:our.gofit588@gmail.com"));
+                  launchUrl(Uri.parse("mailto:gofit588@gmail.com"));
                 },
                 splashColor: blue,
                 child: const Padding(
