@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:gofit/screens/main/listdata.dart';
 import 'package:gofit/screens/main/styles.dart';
-import 'package:gofit/screens/providers/allgifprovider.dart';
 import 'package:gofit/screens/quotes/quotes.dart';
 import 'package:provider/provider.dart';
 import 'package:upgrader/upgrader.dart';

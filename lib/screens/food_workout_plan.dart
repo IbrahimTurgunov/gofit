@@ -27,7 +27,6 @@ class _FoodListState extends State<FoodList>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
