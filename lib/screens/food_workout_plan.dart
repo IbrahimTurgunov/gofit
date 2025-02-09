@@ -33,7 +33,7 @@ class _FoodListState extends State<FoodList>
         title: const Text(
           "Workout Plan & Food List",
           style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 22, color: Colors.black),
+              fontWeight: FontWeight.bold, fontSize: 22, color: blue),
         ),
         centerTitle: true,
       ),
